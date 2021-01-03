@@ -56,13 +56,14 @@ public class CaptainOfTheShip{
 				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 				dr=new DesiredCapabilities();
 				dr.setBrowserName("chrome");
-				dr.setPlatform(Platform.WINDOWS);
+//				dr.setPlatform(Platform.WINDOWS);
 
 				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--no-sandbox");     
 				options.merge(dr);
 
 				if(isGrid.equalsIgnoreCase("true")) {
-					driver=new RemoteWebDriver(new URL("http://localhost:5551/wd/hub"), options);
+					driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
 				}
 				else {
 					driver = new ChromeDriver(options);

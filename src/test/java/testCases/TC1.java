@@ -42,7 +42,7 @@ public class TC1 extends CaptainOfTheShip{
 		try {
 			startApp = new CaptainOfTheShip()
 					.startReporting("SampleReport2","2nd test")
-					.startApplication("edge", URL)
+					.startApplication("chrome", URL)
 					.startPage()
 					.getEmailandVerify("Homepage", "Front-End")
 					.getPasswordandVerify("Homepage", "Front-End")
@@ -66,7 +66,7 @@ public class TC1 extends CaptainOfTheShip{
 		try {
 			startApp = new CaptainOfTheShip()
 					.startReporting("SampleReport3","3rd test")
-					.startApplication("edge", "https://phptravels.com/demo")
+					.startApplication("chrome", "https://phptravels.com/demo")
 					.startPage()
 					.getEmailandVerify("Homepage", "Front-End")
 					.getPasswordandVerify("Homepage", "Front-End")

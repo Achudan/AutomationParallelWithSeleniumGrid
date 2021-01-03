@@ -1,0 +1,23 @@
+docker run -d -p 80:80 docker/getting-started
+
+docker pull selenium/hub
+
+docker pull selenium/node-chrome
+
+docker pull selenium/node-chrome-debug
+
+docker run -d -p 4446:4444 --name selenium-hub -P selenium/hub
+
+docker run -d -P --link selenium-hub:hub selenium/node-chrome-debug
+
+
+Few useful commands
+— re start the grid- ‘docker-compose restart’
+— tear down the grid-‘docker-compose down’
+* it will stop and completely remove the containers
+
+https://medium.com/99xtechnology/scaling-selenium-tests-with-docker-ae4ed06dfa64
+
+https://github.com/elsnoman/esports-automation
+
+https://github.com/SeleniumHQ/docker-selenium/issues/143
