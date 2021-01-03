@@ -65,7 +65,7 @@ public class TC1 extends CaptainOfTheShip{
 		CaptainOfTheShip startApp = null;
 		try {
 			startApp = new CaptainOfTheShip()
-					.startReporting("SampleReport2","3rd test")
+					.startReporting("SampleReport3","3rd test")
 					.startApplication("edge", "https://phptravels.com/demo")
 					.startPage()
 					.getEmailandVerify("Homepage", "Front-End")
