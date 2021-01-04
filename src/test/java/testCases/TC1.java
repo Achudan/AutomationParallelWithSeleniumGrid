@@ -15,7 +15,7 @@ public class TC1 extends CaptainOfTheShip{
 		CaptainOfTheShip startApp = null;
 		try {
 			startApp = new CaptainOfTheShip()
-					.startReporting("SampleReport","1st test")
+					.startReporting("SampleReport1","1st test")
 					.startApplication("chrome", URL)
 					.startPage()
 					.getEmailandVerify("Homepage", "Front-End")

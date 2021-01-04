@@ -11,6 +11,24 @@ services:
         GRID_TIMEOUT: 300
 
   chrome:
+    image: selenium/node-chrome-debug
+    container_name: web-automation_chrome
+    depends_on:
+      - selenium-hub
+    environment:
+      HUB_PORT_4444_TCP_ADDR: selenium-hub
+      HUB_PORT_4444_TCP_PORT: 4444
+      NODE_MAX_SESSION: 4
+      NODE_MAX_INSTANCES: 4
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "9001:5900"
+    links:
+      - selenium-hub
+      
+      #below lines to be commented
+  chrome:
     image: selenium/node-chrome
     depends_on:
       - selenium-hub
@@ -35,6 +53,8 @@ services:
   chrome-debug:
     image: selenium/node-chrome-debug
     ports:
-      - "4445:5900"
+      - "5900:5900"
     depends_on:
+      - selenium-hub
+    links:
       - selenium-hub
