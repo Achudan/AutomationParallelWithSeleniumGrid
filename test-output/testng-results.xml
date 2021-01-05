@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="31107" started-at="2020-12-31T00:17:38 IST" finished-at="2020-12-31T00:18:09 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="31107" started-at="2020-12-31T00:17:38 IST" finished-at="2020-12-31T00:18:09 IST">
+      <class name="testCases.TC1">
+        <test-method status="PASS" signature="instantiate()[pri:0, instance:testCases.TC1@6895a785]" name="instantiate" is-config="true" duration-ms="25" started-at="2020-12-31T00:17:38 IST" finished-at="2020-12-31T00:17:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiate -->
+        <test-method status="PASS" signature="sampleMethod(org.testng.ITestContext)[pri:0, instance:testCases.TC1@6895a785]" name="sampleMethod" duration-ms="10340" started-at="2020-12-31T00:17:38 IST" finished-at="2020-12-31T00:17:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710726a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleMethod -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestContext)[pri:0, instance:testCases.TC1@6895a785]" name="tearDown" is-config="true" duration-ms="246" started-at="2020-12-31T00:17:48 IST" finished-at="2020-12-31T00:17:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710726a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="sampleMethod2(org.testng.ITestContext)[pri:0, instance:testCases.TC1@6895a785]" name="sampleMethod2" duration-ms="9267" started-at="2020-12-31T00:17:48 IST" finished-at="2020-12-31T00:17:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710726a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleMethod2 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestContext)[pri:0, instance:testCases.TC1@6895a785]" name="tearDown" is-config="true" duration-ms="69" started-at="2020-12-31T00:17:58 IST" finished-at="2020-12-31T00:17:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710726a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="sampleMethod3(org.testng.ITestContext)[pri:0, instance:testCases.TC1@6895a785]" name="sampleMethod3" duration-ms="9008" started-at="2020-12-31T00:17:58 IST" finished-at="2020-12-31T00:18:07 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710726a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleMethod3 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestContext)[pri:0, instance:testCases.TC1@6895a785]" name="tearDown" is-config="true" duration-ms="90" started-at="2020-12-31T00:18:07 IST" finished-at="2020-12-31T00:18:07 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710726a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="killAll(org.testng.ITestContext)[pri:0, instance:testCases.TC1@6895a785]" name="killAll" is-config="true" duration-ms="2019" started-at="2020-12-31T00:18:07 IST" finished-at="2020-12-31T00:18:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710726a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- killAll -->
+      </class> <!-- testCases.TC1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
