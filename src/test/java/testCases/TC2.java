@@ -1,15 +1,20 @@
 package testCases;
 
+import java.util.Map;
+
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
+
+import dataProviderUtility.dataProviderParams;
 import masterWrapper.CaptainOfTheShip;
 import utilities.AssertionErrorException;
 import utilities.ThrowCannonBallException;
 
 public class TC2 extends CaptainOfTheShip{
-	@Test
-	public void sampleMethod(ITestContext context) {
-		
+	@dataProviderParams({"sampleMethodDataWorkbook", "Sheet1"})
+	@Test(dataProvider = "dp")
+	public void sampleMethod(ITestContext context,Map<String, String> data) {
+		System.out.println("data"+data);
 		CaptainOfTheShip startApp = null;
 		try {
 			startApp = new CaptainOfTheShip()

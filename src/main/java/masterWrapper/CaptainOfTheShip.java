@@ -1,6 +1,7 @@
 package masterWrapper;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -20,9 +21,12 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import dataProviderUtility.DataProviderBase;
+import dataProviderUtility.dataProviderParams;
 import pages.PageMaster;
 import propertyReader.PropertyFileController;
 import reporter.ExtentReporter;
@@ -56,7 +60,7 @@ public class CaptainOfTheShip{
 				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 				dr=new DesiredCapabilities();
 				dr.setBrowserName("chrome");
-//				dr.setPlatform(Platform.WINDOWS);
+				//				dr.setPlatform(Platform.WINDOWS);
 
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--no-sandbox");     
@@ -106,6 +110,19 @@ public class CaptainOfTheShip{
 
 	}
 
+	@DataProvider(name = "dp")
+	public Object[][] getData(Method m) throws IOException{
+
+		String[] workbookParams = m.getAnnotation(dataProviderParams.class).value();
+		String fileName = workbookParams[0];
+		String sheetName = workbookParams[1];
+		String fileLocation = System.getProperty("user.dir")+"\\src\\main\\resources\\utilities\\dataProviderFiles\\"+fileName+".xlsx";
+
+		DataProviderBase dataProviderBase = new DataProviderBase();
+		Object[][] dataInHashMap = dataProviderBase.getDataForDataProvider(fileLocation, sheetName);
+
+		return dataInHashMap;
+	}
 	@BeforeSuite
 	public void instantiate() {
 		try {
@@ -117,6 +134,7 @@ public class CaptainOfTheShip{
 			//creating object for property file
 			prop = new PropertyFileController();
 			MasterProp = prop.readPropertiesFile("masterProperty");
+
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -152,7 +170,7 @@ public class CaptainOfTheShip{
 		} catch(NoSuchSessionException nsse) {
 			System.out.println("driver expired");
 		}catch (Exception e) {
-		
+
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
