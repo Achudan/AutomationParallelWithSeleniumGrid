@@ -1,0 +1,1 @@
+java "-Dwebdriver.chrome.driver=chromedriver.exe" -jar "selenium-server-standalone-3.141.59.jar" -role webdriver -hub http://192.168.0.6:5551/grid/register -port 5552 -browser browserName=chrome,maxInstances=5,maxSession=5
