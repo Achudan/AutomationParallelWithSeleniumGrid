@@ -4,10 +4,10 @@
 	<listeners>
 		<listener class-name="utilities.SuiteListenerClass"></listener>
 	</listeners>
-	<test thread-count="5" name="Test" parallel="methods">
+	<test thread-count="5" name="Test" parallel="classes">
 		<classes>
 			<class name="testCases.TC1" />
-			<!-- class name="testCases.TC2"/ -->
+			<class name="testCases.TC2" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
