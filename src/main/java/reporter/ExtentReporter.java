@@ -49,7 +49,7 @@ public class ExtentReporter extends CaptainOfTheShip{
 	public void flushNow()
 	{
 		extent.flush();
-		testImageNumber =0;
+//		testImageNumber =0;
 		System.out.println(testCaseName);
 	}
 	

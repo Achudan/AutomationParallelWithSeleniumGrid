@@ -3,6 +3,7 @@ package testCases;
 import java.util.Map;
 
 import org.testng.ITestContext;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import dataProviderUtility.dataProviderParams;
@@ -10,7 +11,10 @@ import masterWrapper.CaptainOfTheShip;
 import utilities.AssertionErrorException;
 import utilities.ThrowCannonBallException;
 
+@Listeners(utilities.ListenerClass.class)
 public class TC1 extends CaptainOfTheShip{
+
+
 	@dataProviderParams({"sampleMethod1DataWorkbook", "Sheet1"})
 	@Test(dataProvider = "dp")
 	public void sampleMethod(ITestContext context, Map<String, String> data) {
@@ -41,8 +45,10 @@ public class TC1 extends CaptainOfTheShip{
 		context.setAttribute("test", startApp.test);
 	}
 
-	@Test(alwaysRun = true) public void sampleMethod2(ITestContext context) {
-		String URL = MasterProp.getProperty("URL");
+	@Test(alwaysRun = false) 
+	public void sampleMethod2(ITestContext context) {
+//		String URL = MasterProp.getProperty("URL");
+		String URL = "https://phptravels.com/demo";
 		CaptainOfTheShip startApp = null;
 		try {
 			startApp = new CaptainOfTheShip()
@@ -66,7 +72,8 @@ public class TC1 extends CaptainOfTheShip{
 		context.setAttribute("test", startApp.test);
 		}
 
-	@Test public void sampleMethod3(ITestContext context) {
+	@Test(alwaysRun = false) 
+	public void sampleMethod3(ITestContext context) {
 		CaptainOfTheShip startApp = null;
 		try {
 			startApp = new CaptainOfTheShip()

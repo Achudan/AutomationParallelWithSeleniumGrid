@@ -62,7 +62,7 @@ public class StartPage extends CaptainOfTheShip{
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 //			e.printStackTrace();
-			extentLog.logTestStep("fatal", "email id method exception");
+			extentLog.logTestStep("fail", "email id method exception");
 			throw new AssertionErrorException("email id element is unavailable", e, driver, extentLog);
 //			extentLog.flushNow();
 //			driver.close();
@@ -85,7 +85,7 @@ public class StartPage extends CaptainOfTheShip{
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			extentLog.logTestStep("info", "password method exception");
+			extentLog.logTestStep("fail", "password method exception");
 		}
 		return this;
 	}
